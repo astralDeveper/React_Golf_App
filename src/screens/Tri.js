@@ -24,6 +24,34 @@ const Tri = ({navigation}) => {
         <Image source={require('../assets/logo.png')} style={styles.logo} />
       </View>
 
+      <TouchableOpacity
+        onPress={() => {
+          navigation.navigate('Previous_Match',{data:"host"});
+        }}
+        style={{
+          backgroundColor: '#FFF',
+          padding: 10,
+          flexDirection: 'row',
+          width: width * 0.48,
+          alignItems: 'center',
+          justifyContent: 'space-between',
+          alignSelf: 'flex-end',
+          marginRight: 40,
+          borderBottomRightRadius: 30,
+          borderTopLeftRadius: 30,
+          marginTop: 20,
+        }}>
+        <Text
+          style={{
+            fontSize: 16,
+            fontFamily: 'Poppins-SemiBold',
+            color: '#425252',
+          }}>
+          Previous Matches
+        </Text>
+        <Image source={require('../assets/hand.png')} />
+      </TouchableOpacity>
+
       {/* Buttons */}
       <View>
         <View style={styles.buttonsContainer1}>
@@ -35,29 +63,33 @@ const Tri = ({navigation}) => {
           </TouchableOpacity>
         </View>
         <View style={styles.buttonsContainer}>
-          <TouchableOpacity onPress={()=>{
-            navigation.navigate("Whs")
-          }} style={styles.button}>
+          <TouchableOpacity
+            onPress={() => {
+              navigation.navigate('Whs');
+            }}
+            style={styles.button}>
             <Text style={styles.buttonText}>
               Which are the formulas to compute WHS handicap?
             </Text>
             <Image source={require('../assets/Arrow3.png')} style={{}} />
           </TouchableOpacity>
 
-          <TouchableOpacity onPress={()=>{
-            navigation.navigate("Handicap")
-          }} style={styles.button}>
+          <TouchableOpacity
+            onPress={() => {
+              navigation.navigate('Handicap');
+            }}
+            style={styles.button}>
             <Text style={styles.buttonText}>
               What is the handicap for a golf player?
             </Text>
-            <Image source={require('../assets/Arrow3.png')}  />
+            <Image source={require('../assets/Arrow3.png')} />
           </TouchableOpacity>
 
           <TouchableOpacity
-          onPress={()=>{
-            navigation.navigate("Work")
-          }}
-          style={styles.button}>
+            onPress={() => {
+              navigation.navigate('Work');
+            }}
+            style={styles.button}>
             <Text style={styles.buttonText}>
               How does the new global handicap system (WHS) work?
             </Text>
@@ -119,7 +151,6 @@ const styles = StyleSheet.create({
     paddingTop: 20,
     paddingBottom: 20,
     width: width * 0.9,
-    
   },
   button: {
     backgroundColor: '#FFFFFF',
@@ -138,7 +169,8 @@ const styles = StyleSheet.create({
     color: '#006D34',
     fontSize: 14,
     textAlign: 'left',
-    fontFamily: 'Poppins-Bold',width:width*0.65
+    fontFamily: 'Poppins-Bold',
+    width: width * 0.65,
   },
   buttonText1: {
     color: '#425252',

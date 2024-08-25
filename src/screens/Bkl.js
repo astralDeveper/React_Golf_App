@@ -185,7 +185,7 @@ const Bkl = ({ navigation }) => {
 
   return (
     <View style={styles.mainContainer}>
-      <Image source={require('../assets/Small_Logo.png')} style={styles.logo} />
+     
       <View style={styles.headerContainer}>
         <TouchableOpacity
           onPress={() => navigation.pop()}
@@ -193,7 +193,7 @@ const Bkl = ({ navigation }) => {
           <Image source={require('../assets/Back.png')} style={styles.icon} />
         </TouchableOpacity>
         <Text style={styles.headerText}>Handicap Calculator</Text>
-        <View style={styles.iconButton} />
+        <Image source={require('../assets/Small_Logo.png')} style={styles.logo} />
       </View>
       <ScrollView>
         <View style={styles.container}>
